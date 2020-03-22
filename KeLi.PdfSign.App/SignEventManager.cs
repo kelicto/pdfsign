@@ -44,7 +44,13 @@ namespace KeLi.PdfSign.App
 
             pb.Focus();
 
-            var pbCtrls = GetPictureBoxList(_ownerForm);
+            var pbCtrls = new List<PictureBox>();
+
+            foreach (var ctrl in _ownerForm.Controls)
+            {
+                if (ctrl is PictureBox item)
+                    pbCtrls.Add(item);
+            }
 
             var pbSigns = pbCtrls.Where(s => s != _pdfImgCtrl && s != pb).ToList();
 
@@ -106,16 +112,16 @@ namespace KeLi.PdfSign.App
 
             var position = pb.Location;
 
-            if (position.X <= 0)
+            if (position.X <= 0 && e.KeyCode == Keys.Left)
                 return;
 
-            if (position.Y <= 0)
+            if (position.Y <= 0 && e.KeyCode == Keys.Up)
                 return;
 
-            if (position.X >= _pdfImgCtrl.Width - pb.Width)
+            if (position.X >= _pdfImgCtrl.Width - pb.Width && e.KeyCode == Keys.Right)
                 return;
 
-            if (position.Y >= _pdfImgCtrl.Height - pb.Height)
+            if (position.Y >= _pdfImgCtrl.Height - pb.Height && e.KeyCode == Keys.Down)
                 return;
 
             switch (e.KeyCode)
@@ -140,19 +146,6 @@ namespace KeLi.PdfSign.App
 
                     break;
             }
-        }
-
-        public static List<PictureBox> GetPictureBoxList(Form form)
-        {
-            var results = new List<PictureBox>();
-
-            foreach (var ctrl in form.Controls)
-            {
-                if (ctrl is PictureBox pb)
-                    results.Add(pb);
-            }
-
-            return results;
         }
     }
 }
