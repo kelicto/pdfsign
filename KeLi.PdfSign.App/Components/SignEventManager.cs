@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace KeLi.PdfSign.App
+namespace KeLi.PdfSign.App.Components
 {
     public class SignEventManager : Control
     {

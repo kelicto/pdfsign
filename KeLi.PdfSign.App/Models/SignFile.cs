@@ -1,13 +1,12 @@
 ﻿using System.Collections.Generic;
 
-namespace KeLi.PdfSign.App
+namespace KeLi.PdfSign.App.Models
 {
     public class SignFile
     {
         public SignFile(string originalPath, string signedPath)
         {
             OriginalPath = originalPath;
-
             SignedPath = signedPath;
         }
 

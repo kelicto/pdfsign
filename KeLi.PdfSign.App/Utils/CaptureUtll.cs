@@ -3,7 +3,7 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Windows.Forms;
 
-namespace KeLi.PdfSign.App
+namespace KeLi.PdfSign.App.Utils
 {
     public static class CaptureUtll
     {

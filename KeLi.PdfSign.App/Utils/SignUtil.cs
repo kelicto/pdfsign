@@ -5,11 +5,11 @@ using System.IO;
 
 using iTextSharp.text.pdf;
 
-using ThoughtWorks.QRCode.Codec;
+using KeLi.PdfSign.App.Models;
 
 using Image = iTextSharp.text.Image;
 
-namespace KeLi.PdfSign.App
+namespace KeLi.PdfSign.App.Utils
 {
     public class SignUtil
     {
@@ -62,18 +62,8 @@ namespace KeLi.PdfSign.App
             if (string.IsNullOrWhiteSpace(link))
                 throw new ArgumentNullException(nameof(link));
 
-            var qrCodeEncoder = new QRCodeEncoder
-            {
-                QRCodeEncodeMode = QRCodeEncoder.ENCODE_MODE.BYTE,
-
-                QRCodeScale = 4,
-
-                QRCodeVersion = 0,
-
-                QRCodeErrorCorrect = QRCodeEncoder.ERROR_CORRECTION.M
-            };
-
-            return qrCodeEncoder.Encode(link);
+            // TODO: QR code.
+            return null;
         }
     }
 }

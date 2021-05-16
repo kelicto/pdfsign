@@ -1,6 +1,8 @@
 ﻿using System.Windows.Forms;
 
-namespace KeLi.PdfSign.App
+using KeLi.PdfSign.App.Components;
+
+namespace KeLi.PdfSign.App.Forms
 {
     public partial class PdfDesignerForm : Form
     {
@@ -11,7 +13,6 @@ namespace KeLi.PdfSign.App
             var meManager = new SignEventManager();
 
             meManager.RegistMouseEvent(pbSign1, pbPdfImg, this);
-
             meManager.RegistMouseEvent(pbSign2, pbPdfImg, this);
         }
 

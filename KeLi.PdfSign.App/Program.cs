@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
 
+using KeLi.PdfSign.App.Forms;
+
 namespace KeLi.PdfSign.App
 {
     internal static class Program

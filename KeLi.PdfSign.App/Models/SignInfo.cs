@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace KeLi.PdfSign.App
+namespace KeLi.PdfSign.App.Models
 {
     public class SignInfo
     {

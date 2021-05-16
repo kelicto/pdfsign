@@ -1,4 +1,4 @@
-﻿namespace KeLi.PdfSign.App
+﻿namespace KeLi.PdfSign.App.Forms
 {
     partial class PdfDesignerForm
     {
